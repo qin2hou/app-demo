@@ -39,5 +39,10 @@ module.exports = {
 		alias: {
 			// 'vue$': 'vue/dist/vue.js'
 		}		
+	},
+
+	devServer: {
+		open: true,
+		disableHostCheck: true
 	}
 }
