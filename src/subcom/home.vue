@@ -9,9 +9,12 @@
 		</mt-swipe>
 		<!-- 工具栏  -->
 		<ul class="mui-table-view mui-grid-view mui-grid-9">
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            	<router-link to="/home/newslist">
                     <img src="../images/news.png" alt="">
-                    <div class="mui-media-body">新闻资讯</div></a></li>
+                    <div class="mui-media-body">新闻资讯</div>
+                </router-link>
+            </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                   	<img src="../images/photos.png" alt="">
                     <div class="mui-media-body">图片分享</div></a></li>
@@ -45,7 +48,7 @@
 			getBanner () {
 				this.$http.get('./src/mock/getBanner.json').then(result => {
 
-					console.log(result.body)
+					// console.log(result.body)
 					this.bannerlist = result.body
 					// Toast('请求成功')
 				}, result => {
